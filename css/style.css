@@ -1164,6 +1164,8 @@ a { color: inherit; }
                 opacity 0.35s ease;
   }
   /* контейнер плавно раскрывается при появлении тултипа */
+  .scheme__tooltip-title { font-size: 16px; }
+  .scheme__tooltip-text { font-size: 14px; }
   .scheme .scheme__tooltip.is-hidden {
     max-height: 0;
     margin-top: 0;
