@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // 390–767 — макет 390, 768–1023 — макет 768, 1024–1280 — макет 1280;
+    // все три просто масштабируются по ширине, >1280 — резиновый десктоп
+    (function () {
+      function applyScale() {
+        var mw = window.innerWidth;                       // как в media queries
+        var w = document.documentElement.clientWidth;     // без скроллбара
+        var z = 1;
+        if (mw < 768) z = w / 390;
+        else if (mw < 1024) z = w / 768;
+        else if (mw <= 1280) z = w / 1280;
+        document.documentElement.style.zoom = z === 1 ? '' : z;
+      }
+      applyScale();
+      window.addEventListener('resize', applyScale);
+    })();
+  </script>
+  <title>Мульти-сплит-системы Midea — кондиционер для 2–5 комнат с одним блоком на фасаде</title>
+  <meta name="description" content="Мульти-сплит-система Midea: один наружный блок и до 5 внутренних. Подберём комплект для квартиры или загородного дома и подскажем, где купить.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" as="font" type="font/ttf" href="fonts/GothamPro.ttf" crossorigin>
+  <link rel="preload" as="font" type="font/ttf" href="fonts/GothamPro-Bold.ttf" crossorigin>
+  <link rel="canonical" href="https://air-midea.com/multipromo/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://air-midea.com/multipromo/">
+  <meta property="og:title" content="Мульти-сплит-системы Midea — кондиционер для 2–5 комнат с одним блоком на фасаде">
+  <meta property="og:description" content="Один наружный блок и до 5 внутренних. Подберём комплект для квартиры или загородного дома.">
+  <meta property="og:image" content="https://air-midea.com/multipromo/assets/hero.jpg">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112391106', 'ym');
+
+      ym(112391106, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+      window.YM_COUNTER_ID = 112391106;
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/112391106" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="#" class="header__logo" aria-label="Midea — на главную">
+        <img src="assets/logo.svg" alt="Midea" width="147" height="52">
+      </a>
+      <nav class="header__nav" id="nav" aria-label="Основная навигация">
+        <a href="#benefits" class="header__link">Преимущества</a>
+        <a href="#types" class="header__link">Типы</a>
+        <a href="#models" class="header__link">Модели</a>
+        <a href="#faq" class="header__link">Вопросы и&nbsp;ответы</a>
+        <a href="#configurator" class="btn btn--sm header__nav-cta">Подобрать</a>
+      </nav>
+      <a href="#configurator" class="btn btn--sm header__cta">Подобрать</a>
+      <button class="header__burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero__card">
+        <img class="hero__bg" width="2000" height="929" src="assets/hero.jpg" fetchpriority="high" alt="Фасад дома с одним наружным блоком мульти&#8209;сплит-системы Midea">
+        <img class="hero__badge" src="assets/hero-badge.svg" alt="" aria-hidden="true">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Мульти-сплит-система Midea:
+            <span class="hero__title-accent">кондиционер для&nbsp;2&#8288;–&#8288;5&nbsp;комнат</span>
+            с&nbsp;одним блоком на&nbsp;фасаде
+          </h1>
+          <p class="hero__text">Кондиционер на&nbsp;2, 3&nbsp;или&nbsp;4&nbsp;комнаты без&nbsp;лишних блоков на&nbsp;фасаде.<br>Подберём комплект и&nbsp;подскажем, где купить.</p>
+        </div>
+        <a href="#configurator" class="btn btn--lg hero__btn">Подобрать</a>
+      </div>
+      <p class="hero__text hero__text--mobile">Кондиционер на&nbsp;2, 3&nbsp;или&nbsp;4&nbsp;комнаты без&nbsp;лишних блоков на&nbsp;фасаде. Подберём комплект и&nbsp;подскажем, где купить.</p>
+      <a href="#configurator" class="btn btn--lg hero__btn--mobile">Подобрать</a>
+    </section>
+
+    <!-- Бенефиты -->
+    <section class="benefits container" id="benefits">
+      <div class="benefits__item" data-reveal>
+        <div class="benefits__icon">
+          <img loading="lazy" decoding="async" src="assets/icon-facade.png" alt="" width="100" height="100">
+        </div>
+        <div class="benefits__body">
+          <h3 class="benefits__title">Один блок на&nbsp;фасаде вместо трёх</h3>
+          <p class="benefits__text">Один наружный блок независимо от&nbsp;числа комнат. Согласовать с&nbsp;УК проще, а&nbsp;фасад дома не&nbsp;обрастает коробками.</p>
+        </div>
+      </div>
+      <div class="benefits__item" data-reveal>
+        <div class="benefits__icon benefits__icon--wide">
+          <img loading="lazy" decoding="async" src="assets/icon-types.png" alt="" width="316" height="100">
+        </div>
+        <div class="benefits__body">
+          <h3 class="benefits__title">Внутренние блоки разного типа</h3>
+          <p class="benefits__text">Настенный в&nbsp;гостиной, кассетный в&nbsp;спальне, канальный в&nbsp;коридоре. Мощность каждого&nbsp;— под&nbsp;свою комнату.</p>
+        </div>
+      </div>
+      <div class="benefits__item" data-reveal>
+        <div class="benefits__icon">
+          <img loading="lazy" decoding="async" src="assets/icon-climate.png" alt="" width="100" height="100">
+        </div>
+        <div class="benefits__body">
+          <h3 class="benefits__title">Идеальный климат для&nbsp;квартиры или&nbsp;загородного дома</h3>
+          <p class="benefits__text">Двушки и&nbsp;трёшки, дома с&nbsp;несколькими комнатами. Везде, где комнат больше одной, а&nbsp;места под&nbsp;блоки мало.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Что такое мульти&#8209;сплит-система -->
+    <section class="about container" id="about">
+      <div class="about__card" data-reveal>
+        <div class="about__head">
+          <h2 class="section-title about__heading">Что такое<br><span class="accent">мульти&#8209;сплит-система?</span></h2>
+          <div class="about__lead">
+            <p class="about__lead-title">Система кондиционирования с&nbsp;одним наружным блоком и&nbsp;несколькими внутренними</p>
+            <p class="about__lead-text">В&nbsp;обычной сплит-системе на&nbsp;каждую комнату приходится отдельный наружный блок: три комнаты&nbsp;— три наружных блока и&nbsp;три трассы. В&nbsp;мульти&#8209;сплите наружный блок один, к&nbsp;нему подключается от&nbsp;2&nbsp;до&nbsp;5&nbsp;внутренних.</p>
+          </div>
+        </div>
+        <div class="scheme" id="scheme">
+          <div class="scheme__window">
+          <div class="scheme__canvas">
+            <img loading="lazy" decoding="async" class="scheme__img" width="953" height="749" src="assets/scheme.svg" alt="Изометрическая схема квартиры с тремя внутренними блоками и одним наружным блоком мульти&#8209;сплит-системы">
+            <button class="scheme__point" type="button" data-unit="indoor" style="--x:23.1%; --y:24%"
+              aria-label="Внутренний блок в гостиной"></button>
+            <button class="scheme__point" type="button" data-unit="indoor" style="--x:60.1%; --y:14.2%"
+              aria-label="Внутренний блок в спальне"></button>
+            <button class="scheme__point" type="button" data-unit="indoor" style="--x:85.9%; --y:32.2%"
+              aria-label="Внутренний блок в кабинете"></button>
+            <button class="scheme__point" type="button" data-unit="outdoor" style="--x:18.9%; --y:59.4%"
+              aria-label="Наружный блок"></button>
+          </div>
+          </div>
+          <div class="scheme__tooltip is-hidden" id="schemeTooltip" role="status">
+            <p class="scheme__tooltip-title"></p>
+            <p class="scheme__tooltip-text"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Какие блоки можно подключить -->
+    <section class="types container" id="types">
+      <div class="types__card" data-reveal>
+        <div class="types__head">
+          <div class="types__head-text">
+            <p class="section-label">Типы блоков мульти&#8209;сплит-системы</p>
+            <h2 class="section-title">Какие блоки <span class="accent">можно подключить?</span></h2>
+          </div>
+          <a href="#configurator" class="btn btn--sm types__cta">Подобрать</a>
+        </div>
+        <div class="types__grid">
+          <article class="types__main">
+            <div class="types__main-picture">
+              <img loading="lazy" decoding="async" width="1024" height="768" src="assets/unit-outdoor.jpg" alt="Наружный блок мульти&#8209;сплит-системы Midea">
+            </div>
+            <div class="types__caption">
+              <h3 class="types__title">Наружный блок</h3>
+              <p class="types__text">Подключайте к&nbsp;нему от&nbsp;2&nbsp;до&nbsp;5&nbsp;внутренних блоков различного типа</p>
+            </div>
+          </article>
+          <div class="types__list">
+            <article class="types__row">
+              <div class="types__caption">
+                <h3 class="types__title">Настенный внутренний&nbsp;блок</h3>
+                <p class="types__text">Привычное решение без&nbsp;сложного монтажа.</p>
+              </div>
+              <div class="types__row-picture">
+                <img loading="lazy" decoding="async" width="1024" height="768" src="assets/unit-wall.jpg" alt="Настенный внутренний блок Midea">
+              </div>
+            </article>
+            <article class="types__row">
+              <div class="types__caption">
+                <h3 class="types__title">Канальный внутренний&nbsp;блок</h3>
+                <p class="types__text">Для&nbsp;интерьера без&nbsp;видимой техники</p>
+              </div>
+              <div class="types__row-picture">
+                <img loading="lazy" decoding="async" width="1024" height="768" src="assets/unit-duct.jpg" alt="Канальный внутренний блок Midea">
+              </div>
+            </article>
+            <article class="types__row">
+              <div class="types__caption">
+                <h3 class="types__title">Кассетный внутренний&nbsp;блок</h3>
+                <p class="types__text">Для&nbsp;просторных помещений</p>
+              </div>
+              <div class="types__row-picture types__row-picture--pad">
+                <img loading="lazy" decoding="async" width="1024" height="768" src="assets/unit-cassette.jpg" alt="Кассетный внутренний блок Midea">
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="types__note">Типы внутренних блоков можно смешивать в&nbsp;одной системе&nbsp;— они не&nbsp;обязаны быть одинаковыми.</p>
+      </div>
+    </section>
+
+    <!-- Модельный ряд -->
+    <section class="models container" id="models">
+      <div class="models__head" data-reveal>
+        <p class="section-label">Модельный ряд мульти&#8209;сплит-систем</p>
+        <h2 class="section-title">Дизайн, который <span class="accent">подойдет каждому дому</span></h2>
+      </div>
+      <div class="models__grid">
+        <article class="model-card" data-reveal data-slides="[&quot;assets/gallery/breezeless-1.jpg&quot;,&quot;assets/gallery/breezeless-2.jpg&quot;,&quot;assets/gallery/breezeless-3.jpg&quot;,&quot;assets/gallery/breezeless-4.jpg&quot;,&quot;assets/gallery/breezeless-5.jpg&quot;]">
+          <div class="model-card__viewport"><img loading="lazy" decoding="async" class="model-card__bg" width="2040" height="1200" src="assets/gallery/breezeless-1.jpg" alt="Настенный блок Midea Breezeless E в интерьере гостиной"></div>
+          <div class="model-card__arrows">
+            <button class="model-card__arrow" type="button" data-dir="-1" aria-label="Предыдущее фото">
+              <img loading="lazy" decoding="async" src="assets/arrow-prev.svg" alt="" width="48" height="48">
+            </button>
+            <button class="model-card__arrow" type="button" data-dir="1" aria-label="Следующее фото">
+              <img loading="lazy" decoding="async" src="assets/arrow-next.svg" alt="" width="48" height="48">
+            </button>
+          </div>
+          <a class="model-card__caption" href="https://phoenix.daichi.ru/download/?ID=19007" target="_blank" rel="noopener">
+            <div class="model-card__caption-text">
+              <h3 class="model-card__type">Настенный блок для&nbsp;системы мульти&#8209;сплит</h3>
+              <p class="model-card__name">Midea Breezeless E</p>
+            </div>
+            <span class="model-card__download" aria-hidden="true">
+              <img loading="lazy" decoding="async" src="assets/icon-download.svg" alt="" width="24" height="24">
+            </span>
+          </a>
+        </article>
+        <article class="model-card" data-reveal data-slides="[&quot;assets/gallery/easy-1.jpg&quot;,&quot;assets/gallery/easy-2.jpg&quot;,&quot;assets/gallery/easy-3.jpg&quot;,&quot;assets/gallery/easy-4.jpg&quot;,&quot;assets/gallery/easy-5.jpg&quot;]">
+          <div class="model-card__viewport"><img loading="lazy" decoding="async" class="model-card__bg" width="2040" height="1200" src="assets/gallery/easy-1.jpg" alt="Настенный блок Midea Easy в интерьере кухни"></div>
+          <div class="model-card__arrows">
+            <button class="model-card__arrow" type="button" data-dir="-1" aria-label="Предыдущее фото">
+              <img loading="lazy" decoding="async" src="assets/arrow-prev.svg" alt="" width="48" height="48">
+            </button>
+            <button class="model-card__arrow" type="button" data-dir="1" aria-label="Следующее фото">
+              <img loading="lazy" decoding="async" src="assets/arrow-next.svg" alt="" width="48" height="48">
+            </button>
+          </div>
+          <a class="model-card__caption" href="https://phoenix.daichi.ru/download/?ID=19007" target="_blank" rel="noopener">
+            <div class="model-card__caption-text">
+              <h3 class="model-card__type">Настенный блок для&nbsp;системы мульти&#8209;сплит</h3>
+              <p class="model-card__name">Midea Easy</p>
+            </div>
+            <span class="model-card__download" aria-hidden="true">
+              <img loading="lazy" decoding="async" src="assets/icon-download.svg" alt="" width="24" height="24">
+            </span>
+          </a>
+        </article>
+        <article class="model-card" data-reveal data-slides="[&quot;assets/gallery/duct-1.jpg&quot;,&quot;assets/gallery/duct-2.jpg&quot;]">
+          <div class="model-card__viewport"><img loading="lazy" decoding="async" class="model-card__bg" width="2040" height="1200" src="assets/gallery/duct-1.jpg" alt="Канальный блок Midea MML(T)J1 в интерьере гостиной"></div>
+          <div class="model-card__arrows">
+            <button class="model-card__arrow" type="button" data-dir="-1" aria-label="Предыдущее фото">
+              <img loading="lazy" decoding="async" src="assets/arrow-prev.svg" alt="" width="48" height="48">
+            </button>
+            <button class="model-card__arrow" type="button" data-dir="1" aria-label="Следующее фото">
+              <img loading="lazy" decoding="async" src="assets/arrow-next.svg" alt="" width="48" height="48">
+            </button>
+          </div>
+          <a class="model-card__caption" href="https://phoenix.daichi.ru/download/?ID=19007" target="_blank" rel="noopener">
+            <div class="model-card__caption-text">
+              <h3 class="model-card__type">Канальный блок для&nbsp;системы мульти&#8209;сплит</h3>
+              <p class="model-card__name">Midea MML(T)J1</p>
+            </div>
+            <span class="model-card__download" aria-hidden="true">
+              <img loading="lazy" decoding="async" src="assets/icon-download.svg" alt="" width="24" height="24">
+            </span>
+          </a>
+        </article>
+        <article class="model-card" data-reveal data-slides="[&quot;assets/gallery/cassette-1.jpg&quot;,&quot;assets/gallery/cassette-2.jpg&quot;]">
+          <div class="model-card__viewport"><img loading="lazy" decoding="async" class="model-card__bg" width="2040" height="1200" src="assets/gallery/cassette-1.jpg" alt="Кассетный блок Midea MCA3I в интерьере гостиной"></div>
+          <div class="model-card__arrows">
+            <button class="model-card__arrow" type="button" data-dir="-1" aria-label="Предыдущее фото">
+              <img loading="lazy" decoding="async" src="assets/arrow-prev.svg" alt="" width="48" height="48">
+            </button>
+            <button class="model-card__arrow" type="button" data-dir="1" aria-label="Следующее фото">
+              <img loading="lazy" decoding="async" src="assets/arrow-next.svg" alt="" width="48" height="48">
+            </button>
+          </div>
+          <a class="model-card__caption" href="https://phoenix.daichi.ru/download/?ID=19007" target="_blank" rel="noopener">
+            <div class="model-card__caption-text">
+              <h3 class="model-card__type">Кассетный блок для&nbsp;системы мульти&#8209;сплит</h3>
+              <p class="model-card__name">Midea MCA3I</p>
+            </div>
+            <span class="model-card__download" aria-hidden="true">
+              <img loading="lazy" decoding="async" src="assets/icon-download.svg" alt="" width="24" height="24">
+            </span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Конфигуратор / лид-форма -->
+    <section class="configurator container" id="configurator">
+      <form class="configurator__card" id="leadForm" novalidate data-reveal>
+        <div class="configurator__inner">
+          <h2 class="configurator__title">Соберите свою<br>мульти&#8209;сплит-систему Midea!</h2>
+
+          <fieldset class="configurator__group">
+            <legend class="configurator__label">Укажите тип объекта</legend>
+            <div class="chips" role="radiogroup" aria-label="Тип объекта">
+              <label class="chip">
+                <input type="radio" name="objectType" value="Квартира" checked>
+                <span>Квартира</span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="objectType" value="Загородный дом">
+                <span>Загородный дом</span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="objectType" value="Офис">
+                <span>Офис</span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="objectType" value="Нежилое помещение">
+                <span>Нежилое помещение</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="configurator__group">
+            <legend class="configurator__label">Укажите количество комнат в&nbsp;вашем помещении</legend>
+            <div class="chips" role="radiogroup" aria-label="Количество комнат">
+              <label class="chip chip--square">
+                <input type="radio" name="rooms" value="1" checked>
+                <span>1</span>
+              </label>
+              <label class="chip chip--square">
+                <input type="radio" name="rooms" value="2">
+                <span>2</span>
+              </label>
+              <label class="chip chip--square">
+                <input type="radio" name="rooms" value="3">
+                <span>3</span>
+              </label>
+              <label class="chip chip--square">
+                <input type="radio" name="rooms" value="4">
+                <span>4</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="configurator__group">
+            <legend class="configurator__label">Как с&nbsp;вами связаться?</legend>
+            <input class="hp-field" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="configurator__fields">
+              <div class="field">
+                <label class="field__label" for="city">Ваш город</label>
+                <input class="field__input" type="text" id="city" name="city" autocomplete="address-level2" required>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="name">Ваше имя</label>
+                <input class="field__input" type="text" id="name" name="name" autocomplete="name" required>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="phone">Номер телефона</label>
+                <input class="field__input" type="tel" id="phone" name="phone" autocomplete="tel" required inputmode="tel" placeholder="+7 ___ ___-__-__" maxlength="16">
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="configurator__footer">
+          <div class="configurator__submit-bar">
+            <p class="configurator__consent">Нажимая на&nbsp;кнопку «Подобрать», вы соглашаетесь с&nbsp;нашей <a href="https://air-midea.com/privacy/" target="_blank" rel="noopener">политикой конфиденциальности</a></p>
+            <button class="btn btn--lg" type="submit">Подобрать</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq container" id="faq">
+      <div class="faq__card" data-reveal>
+        <h2 class="section-title faq__title">Остались <span class="accent">вопросы?</span></h2>
+        <div class="faq__list" id="faqList">
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Чем&nbsp;мульти&#8209;сплит-система лучше обычной сплит-системы?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <ul class="accordion__list">
+                <li>Один наружный блок вместо двух–шести.</li>
+                <li>На&nbsp;фасаде одно устройство: это&nbsp;проще согласовать с&nbsp;управляющей компанией и&nbsp;не&nbsp;портит вид дома.</li>
+                <li>Наружный блок подбирают не&nbsp;по&nbsp;сумме мощностей внутренних&nbsp;— система допускает перегрузку, поэтому на&nbsp;несколько комнат часто хватает блока меньшей мощности.</li>
+                <li>Годовое энергопотребление может быть до&nbsp;35% ниже, чем&nbsp;у&nbsp;такого&nbsp;же числа инверторных сплит-систем.</li>
+                <li>Обслуживание и&nbsp;ремонт одного наружного блока дешевле, чем&nbsp;нескольких.</li>
+                <li>Уровень шума от&nbsp;одного наружного блока мульти&#8209;сплит-системы меньше, чем&nbsp;суммарный шум от&nbsp;нескольких сплит-систем, расположенных рядом.</li>
+                <li>В&nbsp;наружном блоке мульти&#8209;сплит-системы больше датчиков и&nbsp;более «умная» электроника. Таким образом, мульти&#8209;сплит-системы обладают большей степенью надёжности.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Можно&nbsp;ли включить мульти&#8209;сплит-систему только в&nbsp;одной комнате?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>Да. Каждый внутренний блок включается и&nbsp;выключается отдельно, и&nbsp;температуру в&nbsp;каждой комнате задают свою. Если работает один блок, наружный сбрасывает обороты и&nbsp;потребляет столько, сколько нужно этой комнате.</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Можно&nbsp;ли на&nbsp;мульти&#8209;сплит-системе включить холод в&nbsp;одной комнате и&nbsp;обогрев в&nbsp;другой?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>Нет. Внутренние блоки работают в&nbsp;общем режиме: либо вся система охлаждает, либо вся греет. Температуру в&nbsp;каждой комнате при&nbsp;этом можно задать свою, а&nbsp;ненужные блоки выключить. Если нужны разные режимы одновременно&nbsp;— это&nbsp;уже&nbsp;VRF&#8209;система с&nbsp;рекуперацией тепла.</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Что&nbsp;будет, если сломается наружный блок мульти&#8209;сплит-системы?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>Перестанут охлаждать все комнаты сразу: наружный блок в&nbsp;системе один. У&nbsp;отдельных сплит-систем такого риска нет&nbsp;— сломался один кондиционер, остальные продолжают работать. Это&nbsp;главный компромисс мульти&#8209;сплита: одна коробка на&nbsp;фасаде вместо трёх в&nbsp;обмен на&nbsp;одну точку отказа. Взвесить его стоит до&nbsp;покупки, а&nbsp;не&nbsp;после.</p>
+              <p>Но, к&nbsp;примеру, если произойдёт скачок напряжения в&nbsp;здании, то придётся чинить только один наружный блок мульти&#8209;сплита, а&nbsp;не&nbsp;несколько сплитов.</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Мульти-сплит дороже, чем&nbsp;несколько отдельных кондиционеров?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>Зависит от&nbsp;внутренних блоков. На&nbsp;бюджетной линейке системы мульти&#8209;сплит комплект выйдет дороже. На&nbsp;премиальной&nbsp;— сопоставимо по&nbsp;цене или&nbsp;дешевле.</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Можно&nbsp;ли поставить наружный блок кондиционера на&nbsp;балкон?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>Часто да, но&nbsp;не&nbsp;всегда. Наружному блоку мульти&#8209;сплит-системы нужен свободный приток и&nbsp;отвод воздуха, поэтому на&nbsp;наглухо застеклённой лоджии его не&nbsp;ставят. Имеет значение и&nbsp;то, выдержит&nbsp;ли конструкция вес, и&nbsp;что&nbsp;разрешает управляющая компания. Точный ответ даст монтажник после осмотра.</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Экономит&nbsp;ли мульти&#8209;сплит электричество?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>Годовое потребление может быть до&nbsp;35% ниже, чем&nbsp;у&nbsp;такого&nbsp;же количества инверторных сплит-систем. Класс энергоэффективности достигает A+++ по&nbsp;охлаждению.</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Можно&nbsp;ли подключить к&nbsp;мульти&#8209;сплит-системе внутренние блоки разного типа?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>Да. Настенный в&nbsp;гостиной, кассетный в&nbsp;спальне с&nbsp;подвесным потолком, канальный в&nbsp;коридоре&nbsp;— всё в&nbsp;одной системе. Мощность каждого подбирается под&nbsp;свою комнату.</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Обязательно&nbsp;ли все блоки мульти&#8209;сплит-системы одного производителя?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>Да. Внутренние блоки мульти&#8209;сплит-системы подбираются из&nbsp;линейки, совместимой с&nbsp;конкретным наружным блоком.</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">На&nbsp;сколько комнат хватает одной мульти&#8209;сплит-системы?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>От&nbsp;двух до&nbsp;пяти внутренних блоков на&nbsp;один наружный. Число зашито в&nbsp;индекс модели: M2OE&nbsp;— до&nbsp;двух комнат, M5OE&nbsp;— до&nbsp;пяти.</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Дороже&nbsp;ли обслуживание мульти&#8209;сплит-системы?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>Дешевле. У&nbsp;мульти&#8209;сплит-системы обслуживать нужно один наружный блок вместо двух–шести.</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Можно&nbsp;ли управлять мульти&#8209;сплит-системой со&nbsp;смартфона?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>Конечно, можно и&nbsp;нужно&nbsp;— с&nbsp;помощью приложения Daichi Comfort, подключение к&nbsp;которому обеспечат опциональные Wi&#8209;Fi-контроллеры.</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Насколько шумно работает наружный блок мульти&#8209;сплит-системы?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>Один наружный блок мульти&#8209;сплита тише, чем&nbsp;несколько блоков отдельных сплит-систем, смонтированных рядом. А&nbsp;это&nbsp;часто является важным фактором в&nbsp;современной многоквартирной и&nbsp;частной застройке.</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Работает&nbsp;ли мульти&#8209;сплит-система на&nbsp;обогрев зимой?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>Да, система работает и&nbsp;на&nbsp;охлаждение, и&nbsp;на&nbsp;обогрев при&nbsp;отрицательных наружных температурах. Нижняя граница отличается у&nbsp;разных моделей.</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Можно&nbsp;ли добавить внутренний блок к&nbsp;мульти&#8209;сплит-системе позже?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>Если есть свободный порт для&nbsp;подключения и&nbsp;позволяет запас производительности наружного блока, то внутренний блок можно подключить и&nbsp;позже, например, после ремонта в&nbsp;комнате.</p>
+            </div>
+          </details>
+
+          <details class="accordion">
+            <summary class="accordion__summary">
+              <span class="accordion__question">Правда&nbsp;ли, что&nbsp;у&nbsp;внутренних блоков мульти&#8209;сплита меньше функций, чем&nbsp;у&nbsp;обычных сплит-систем?</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__answer">
+              <p>Да, ряд второстепенных функций не&nbsp;может быть активирован в&nbsp;мульти&#8209;сплит-системах. Это&nbsp;связано с&nbsp;конструктивными и&nbsp;логическими особенностями оборудования.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p class="footer__slogan">
+      <span class="footer__slogan-accent">Мульти-сплит-системы Midea.</span><br>
+      <span class="footer__slogan-black">Больше комнат, меньше блоков.</span>
+    </p>
+    <img loading="lazy" decoding="async" class="footer__logo" src="assets/logo-footer.svg" alt="Midea" width="200" height="72">
+    <p class="footer__copy">©&nbsp;2026&nbsp;Daichi. Все права защищены.</p>
+    <button class="footer__top" id="scrollTop" type="button" aria-label="Наверх">
+      <img loading="lazy" decoding="async" src="assets/arrow-top.svg" alt="" width="64" height="64">
+    </button>
+  </footer>
+
+  <button class="lift" id="lift" type="button" aria-label="Наверх">
+    <img loading="lazy" decoding="async" src="assets/arrow-top.svg" alt="" width="64" height="64">
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
