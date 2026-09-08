@@ -541,6 +541,10 @@
     });
   });
 
+  /* ---------- Год в копирайте ---------- */
+  const copyYear = document.getElementById('copyYear');
+  if (copyYear) copyYear.textContent = new Date().getFullYear();
+
   /* ---------- Кнопка «наверх» ---------- */
   const topBtn = document.getElementById('scrollTop');
   if (topBtn) {
