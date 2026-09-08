@@ -440,7 +440,7 @@
     let busy = false;
     const EASE = window.matchMedia('(prefers-reduced-motion: reduce)').matches
       ? 'none'
-      : 'transform 0.55s cubic-bezier(0.65, 0, 0.35, 1)';
+      : 'transform 0.45s cubic-bezier(0.65, 0, 0.35, 1)';
 
     function preload(i) {
       const im = new Image();
@@ -471,38 +471,25 @@
       next.style.transform = 'translateX(' + (dir > 0 ? '100%' : '-100%') + ')';
       viewport.appendChild(next);
 
-      function start() {
+      // стартуем сразу: соседние слайды предзагружены, ждать decode
+      // не нужно — ожидание ощущалось как задержка листания
+      requestAnimationFrame(function () {
         requestAnimationFrame(function () {
-          requestAnimationFrame(function () {
-            cur.style.transition = EASE;
-            next.style.transition = EASE;
-            cur.style.transform = 'translateX(' + (dir > 0 ? '-100%' : '100%') + ')';
-            next.style.transform = 'translateX(0)';
-          });
+          cur.style.transition = EASE;
+          next.style.transition = EASE;
+          cur.style.transform = 'translateX(' + (dir > 0 ? '-100%' : '100%') + ')';
+          next.style.transform = 'translateX(0)';
         });
-        setTimeout(function () {
-          cur.remove();
-          next.style.transition = '';
-          img = next;
-          idx = nextIdx;
-          busy = false;
-          preload(idx + dir);
-        }, 600);
-      }
-      // ждём декодирования нового кадра, чтобы не было рывка,
-      // но не дольше 1.5с — дальше едем с тем, что есть
-      let started = false;
-      function startOnce() {
-        if (started) return;
-        started = true;
-        start();
-      }
-      if (next.decode) {
-        next.decode().then(startOnce, startOnce);
-        setTimeout(startOnce, 1500);
-      } else {
-        startOnce();
-      }
+      });
+      setTimeout(function () {
+        cur.remove();
+        next.style.transition = '';
+        img = next;
+        idx = nextIdx;
+        busy = false;
+        preload(idx + 1);
+        preload(idx - 1);
+      }, 470);
     }
 
     arrows.forEach(function (btn) {

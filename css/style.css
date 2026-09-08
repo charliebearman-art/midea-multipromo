@@ -1241,6 +1241,8 @@ a { color: inherit; }
         
   .faq__card { padding-top: 32px; padding-bottom: 16px; }
   .faq__title { padding-inline: 16px; font-size: 20px; margin-bottom: 24px; }
+  .accordion__question,
+  .accordion__answer { font-size: 14px; }
   .accordion__answer { padding: 0 16px 16px; }
 
   .lift { right: 16px; bottom: 16px; width: 48px; height: 48px; }
